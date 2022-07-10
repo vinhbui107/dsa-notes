@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def pivotIndex(self, nums: List[int]) -> int:
+    def pivotIndex(self, nums) -> int:
         left_sum = 0
         right_sum = sum(nums)
 
