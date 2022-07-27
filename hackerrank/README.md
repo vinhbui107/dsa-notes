@@ -1,3 +1,3 @@
 # HackerRank
 
-My HackerRank solution
+My solutions for The HackerRank Interview Preparation Kit
