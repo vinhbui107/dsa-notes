@@ -1,3 +1,3 @@
 # LeetCode
 
-My LeetCode solution
+My solutions for LeetCode 75
