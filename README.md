@@ -1,2 +1,2 @@
 # python-notes
-Using Python to implement DSA and LeetCode solutions
+Using Python to implement DSA, LeetCode and HackerRank solutions
