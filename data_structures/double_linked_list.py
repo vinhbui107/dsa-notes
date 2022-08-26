@@ -1,10 +1,11 @@
 class Node:
-    def __init__(self, next_node=None, value=None):
-        next_node = next_node
+    def __init__(self, next_node=None, previous_node=None, value=None):
         value = value
+        next_node = next_node
+        previous_node = previous_node
 
 
-class SingleLinkedList:
+class DoubleLinkedList:
     def __init__(self):
         pass
 
@@ -28,6 +29,3 @@ class SingleLinkedList:
 
     def replace(self):
         pass
-
-
-
