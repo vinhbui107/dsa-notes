@@ -1,8 +1,9 @@
+from __future__ import annotations
 from typing import Optional
 
 
 class ListNode:
-    def __init__(self, next_node=None, value: int = None):
+    def __init__(self, next_node: ListNode = None, value: int = None):
         self.next_node = next_node
         self.value = value
 
@@ -101,7 +102,7 @@ class SinglyLinkedList:
             prev_node = current_node
             current_node = next_node
 
-        return prev_node
+        self.head = prev_node
 
 
 linked_list = SinglyLinkedList()
