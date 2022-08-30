@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 def binary_search(items: list[int], key: int) -> bool:
     if not items:
         return False
