@@ -110,22 +110,22 @@ linked_list.prepend(1)
 linked_list.append(2)
 linked_list.append(3)
 linked_list.append(4)
-print(f"After append list: {linked_list.__str__()}")
+print(f"After append list: {linked_list}")
 print(f"Value at index 1: {linked_list.get(1)}")
 
 linked_list.pop()
-print(f"Current list after remove tail node: {linked_list.__str__()}")
+print(f"Current list after remove tail node: {linked_list}")
 
 linked_list.pop_first()
-print(f"Current list after remove head node: {linked_list.__str__()}")
+print(f"Current list after remove head node: {linked_list}")
 
 linked_list.remove(1)
-print(f"Current list after remove index 1: {linked_list.__str__()}")
+print(f"Current list after remove index 1: {linked_list}")
 
 linked_list.prepend(1)
 linked_list.append(3)
 linked_list.append(4)
-print(f"Current list: {linked_list.__str__()}")
+print(f"Current list: {linked_list}")
 
 linked_list.reverse()
-print(f"List after reverse {linked_list.__str__()}")
+print(f"List after reverse {linked_list}")
