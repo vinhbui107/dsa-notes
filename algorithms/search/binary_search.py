@@ -1,13 +1,13 @@
-def binary_search(items: list[int], key: int) -> bool:
-    if not items:
+def binary_search(collection: list[int], key: int) -> bool:
+    if not collection:
         return False
 
     left = 0
-    right = len(items) - 1
+    right = len(collection) - 1
 
     while left < right:
         mid_point = left + (right - left)
-        current_item = items[mid_point]
+        current_item = collection[mid_point]
         if current_item == key:
             return True
         elif current_item < key:
@@ -19,11 +19,10 @@ def binary_search(items: list[int], key: int) -> bool:
 
 
 key_search = 2
-list_a = [1, 2, 3, 4, 5, 6, 8]
-print(f"List a: {list_a}")
-print(f"Is key {key_search} in items: {binary_search(items=list_a, key=key_search)}")
+items_a = [1, 2, 3, 4, 5, 6, 8]
+print(f"List a: {items_a}")
+print(f"Is key {key_search} in items: {binary_search(collection=items_a, key=key_search)}")
 
 key_search = 10
-list_a = [1, 2, 3, 4, 5, 6, 8]
-print(f"List a: {list_a}")
-print(f"Is key {key_search} in items: {binary_search(items=list_a, key=key_search)}")
+print(f"List a: {items_a}")
+print(f"Is key {key_search} in items: {binary_search(collection=items_a, key=key_search)}")
