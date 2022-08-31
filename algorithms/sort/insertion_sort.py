@@ -1,4 +1,4 @@
-def intersection_sort(collection: list[int]) -> list[int]:
+def insertion_sort(collection: list[int]) -> list[int]:
     if not collection:
         return []
 
@@ -17,4 +17,4 @@ def intersection_sort(collection: list[int]) -> list[int]:
 
 items = [10, 24, 32, 21, 1, 8, 9, 345]
 print(f"List a: {items}")
-print(f"List a after sort: {intersection_sort(items)}")
+print(f"List a after sort: {insertion_sort(items)}")
