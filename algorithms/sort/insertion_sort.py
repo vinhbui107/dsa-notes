@@ -1,20 +1,20 @@
-def insertion_sort(collection: list[int]) -> list[int]:
-    if not collection:
+def insertion_sort(items: list[int]) -> list[int]:
+    if not items:
         return []
 
-    for i in range(1, len(collection)):
-        current_item = collection[i]
+    for i in range(1, len(items)):
+        key = items[i]
 
         j = i - 1
-        while j >= 0 and collection[j] > current_item:
-            collection[j + 1] = collection[j]
+        while j >= 0 and items[j] > key:
+            items[j + 1] = items[j]
             j -= 1
 
-        collection[j + 1] = current_item
+        items[j + 1] = key
 
-    return collection
+    return items
 
 
-items = [10, 24, 32, 21, 1, 8, 9, 345]
-print(f"List a: {items}")
-print(f"List a after sort: {insertion_sort(items)}")
+items_a = [10, 24, 32, 21, 1, 8, 9, 345]
+print(f"List a: {items_a}")
+print(f"List a after sort: {insertion_sort(items_a)}")
