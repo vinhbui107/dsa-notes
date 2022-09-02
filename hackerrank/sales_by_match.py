@@ -2,6 +2,10 @@
 
 
 def sockMerchant(n, socks):
+    """
+    >>> sockMerchant(n=9, socks=[10, 20, 20, 10, 10, 30, 50, 10, 20])
+    3
+    """
     number_of_pairs = 0
     seen = {}
     for sock in socks:
@@ -12,7 +16,3 @@ def sockMerchant(n, socks):
             seen[sock] = 1
 
     return number_of_pairs
-
-
-actual = sockMerchant(n=9, socks=[10, 20, 20, 10, 10, 30, 50, 10, 20])
-print(actual == 3)

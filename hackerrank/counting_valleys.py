@@ -2,6 +2,10 @@
 
 
 def countingValleys(steps, path):
+    """
+    >>> countingValleys(steps=8, path="UDDDUDUU")
+    1
+    """
     count_valleys = 0
     balance = 0
 
@@ -15,7 +19,3 @@ def countingValleys(steps, path):
             count_valleys += 1
 
     return count_valleys
-
-
-actual = countingValleys(steps=8, path="UDDDUDUU")
-print(actual == 1)

@@ -2,6 +2,10 @@
 
 
 def repeatedString(s, n):
+    """
+    >>> repeatedString(s="aba", n=10)
+    7
+    """
     total_repeat = n // len(s)
     remain_string = n % len(s)
     count = 0
@@ -17,7 +21,3 @@ def repeatedString(s, n):
             count += 1
 
     return count
-
-
-actual = repeatedString(s="aba", n=10)
-print(actual == 7)

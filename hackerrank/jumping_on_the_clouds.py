@@ -2,6 +2,10 @@
 
 
 def jumpingOnClouds(clouds):
+    """
+    >>> jumpingOnClouds(clouds=[0, 0, 1, 0, 0, 1, 0])
+    4
+    """
     i = 0
     jump_count = 0
 
@@ -16,7 +20,3 @@ def jumpingOnClouds(clouds):
             i += 1
 
     return jump_count
-
-
-actual = jumpingOnClouds(clouds=[0, 0, 1, 0, 0, 1, 0])
-print(actual == 4)
