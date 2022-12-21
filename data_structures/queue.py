@@ -39,4 +39,4 @@ class Queue:
             return None
 
         item = self.items.pop(0)
-        print(f"Get {item} from queue.")
+        print(f"Get {item} from queue." )
