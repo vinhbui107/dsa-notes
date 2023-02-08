@@ -37,3 +37,8 @@ class Stack:
 
         item = self.items.pop()
         print(f"Pop {item} from stack.")
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

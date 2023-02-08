@@ -100,3 +100,7 @@ class MaxHeap:
         self.__swap_down(1)
         return max_value
 
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

@@ -40,3 +40,8 @@ class Queue:
 
         item = self.items.pop(0)
         print(f"Get {item} from queue.")
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

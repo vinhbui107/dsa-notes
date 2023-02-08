@@ -123,4 +123,3 @@ print(f"Total nodes in tree is: {binary_tree.count(binary_tree.root)}")
 binary_tree.remove(21)
 print(f"Current tree after remove value 21: {binary_tree.__str__()}")
 print(f"Total nodes in tree is: {binary_tree.count(binary_tree.root)}")
-
