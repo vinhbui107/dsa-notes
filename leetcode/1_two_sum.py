@@ -1,5 +1,7 @@
 class Solution:
     """
+    https://leetcode.com/problems/two-sum/
+
     >>> solution = Solution()
     >>> solution.twoSum(nums=[2, 7, 11, 15], target=9)
     [0, 1]

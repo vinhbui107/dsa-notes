@@ -1,5 +1,7 @@
 class Solution:
     """
+    https://leetcode.com/problems/contains-duplicate/
+
     >>> solution = Solution()
     >>> solution.containsDuplicate(nums=[2, 7, 2, 15])
     True
