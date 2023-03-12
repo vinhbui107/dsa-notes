@@ -11,7 +11,7 @@ class Solution:
         length = 0
         char_set = set()
 
-        for R in range(len(s)):
+        for R in range(0, len(s)):
             while s[R] in char_set:
                 char_set.remove(s[L])
                 L += 1
