@@ -11,9 +11,11 @@ class Solution:
         nums.sort()
 
         for index, num in enumerate(nums):
+            # skip positive integers
             if num > 0:
                 break
 
+            # skip duplicate
             if index > 0 and num == nums[index - 1]:
                 continue
 
