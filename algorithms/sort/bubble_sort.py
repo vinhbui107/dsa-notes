@@ -1,47 +1,47 @@
-def bubble_sort(collection: list[int]) -> list[int]:
-    if not collection:
+def bubble_sort(nums: list[int]) -> list[int]:
+    """
+    >>> bubble_sort(nums=[2, 4, 1, 5, 6, 8])
+    Number of loop: 15
+    [1, 2, 4, 5, 6, 8]
+    """
+    if not nums:
         return []
 
     loop_count = 0
-    for i in range(len(collection)):
-        for j in range(0, len(collection) - i - 1):
+    for i in range(len(nums)):
+        for j in range(0, len(nums) - i - 1):
             loop_count += 1
 
-            if collection[j] > collection[j + 1]:
-                collection[j], collection[j + 1] = collection[j + 1], collection[j]
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
 
     print(f"Number of loop: {loop_count}")
-    return collection
+    return nums
 
 
-items = [10, 24, 32, 21, 1, 8, 9, 345]
-print(f"List a: {items}")
-print(f"List a after sort: {bubble_sort(items)}")
-
-
-def bubble_sort_optimized(collection: list[int]) -> list[int]:
-    if not collection:
+def bubble_sort_optimized(nums: list[int]) -> list[int]:
+    """
+    >>> bubble_sort_optimized(nums=[2, 4, 1, 5, 6, 8])
+    Number of loop: 12
+    [1, 2, 4, 5, 6, 8]
+    """
+    if not nums:
         return []
 
     loop_count = 0
-    for i in range(len(collection)):
+    for i in range(len(nums)):
         # keep track of swapping
         swapped = False
 
-        for j in range(0, len(collection) - i - 1):
+        for j in range(0, len(nums) - i - 1):
             loop_count += 1
 
-            if collection[j] > collection[j + 1]:
-                collection[j], collection[j + 1] = collection[j + 1], collection[j]
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
                 swapped = True
 
         if not swapped:
             break
 
     print(f"Number of loop: {loop_count}")
-    return collection
-
-
-items = [24, 14, 32, 21, 1, 8, 9, 345]
-print(f"\nList a: {items}")
-print(f"List a after sort: {bubble_sort_optimized(items)}")
+    return nums
