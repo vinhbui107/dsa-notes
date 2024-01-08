@@ -45,3 +45,8 @@ def bubble_sort_optimized(nums: list[int]) -> list[int]:
 
     print(f"Number of loop: {loop_count}")
     return nums
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

@@ -21,3 +21,7 @@ def bucket_sort(nums: list[int], bucket_size: int = 5) -> list[int]:
 
     return sorted_arr
 
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

@@ -19,3 +19,6 @@ def counting_sort(nums: list[int]) -> list[int]:
     return sorted_arr
 
 
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
