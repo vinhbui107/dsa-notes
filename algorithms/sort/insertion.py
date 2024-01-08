@@ -17,3 +17,8 @@ def insertion_sort(nums: list[int]) -> list[int]:
         nums[j + 1] = key
 
     return nums
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

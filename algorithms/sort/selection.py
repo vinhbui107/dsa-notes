@@ -15,3 +15,8 @@ def selection_sort(nums: list[int]) -> list[int]:
             nums[least], nums[i] = nums[i], nums[least]
 
     return nums
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
