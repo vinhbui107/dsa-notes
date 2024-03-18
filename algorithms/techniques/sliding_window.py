@@ -1,14 +1,14 @@
-def sliding_window_fixed(nums: list[int], k: int) -> bool:
+def has_two_elements_sum_in_window(nums: list[int], k: int) -> bool:
     """
-    Given a array return true if there are two total values of tow element within a window equal k
+    Given an array, return True if there are two elements within a window whose sum equals k.
 
-    >>> sliding_window_fixed([1, 6, 2, 7, 4], 8)
+    >>> has_two_elements_sum_in_window([1, 6, 2, 7, 4], 8)
     True
 
-    >>> sliding_window_fixed([1, 6, 2, 7, 4], 100)
+    >>> has_two_elements_sum_in_window([1, 6, 2, 7, 4], 100)
     False
 
-    >>> sliding_window_fixed([], 100)
+    >>> has_two_elements_sum_in_window([], 100)
     False
     """
     L = 0
@@ -21,18 +21,18 @@ def sliding_window_fixed(nums: list[int], k: int) -> bool:
     return False
 
 
-def sliding_window_variable(nums: list[int]) -> int:
+def longest_uniform_subarray(nums: list[int]) -> int:
     """
-    Find length of longest subarray, with the same value of each position
+    Find the length of the longest subarray with the same value at each position.
 
-    >>> sliding_window_variable([1, 2, 2, 3, 3, 3])
+    >>> longest_uniform_subarray([1, 2, 2, 3, 3, 3])
     3
 
-    >>> sliding_window_variable([1, 2, 3, 4, 5])
+    >>> longest_uniform_subarray([1, 2, 3, 4, 5])
     1
 
-    >>> sliding_window_variable([1, 2, 2, 4, 4, 4, 4, 3, 4, 3])
-    3
+    >>> longest_uniform_subarray([1, 2, 2, 4, 4, 4, 4, 3, 4, 3])
+    4
     """
     length = 0
     L = 0
@@ -43,6 +43,33 @@ def sliding_window_variable(nums: list[int]) -> int:
         else:
             length = max(length, R - L + 1)
     return length
+
+
+def min_subarray_sum_ge_k(nums: list[int], k: int) -> int:
+    """
+    Find the minimum length subarray, where the sum is equal or greater than k.
+
+    >>> min_subarray_sum_ge_k([2, 3, 1, 2, 4, 3], 7)
+    2
+
+    >>> min_subarray_sum_ge_k([1, 4, 4], 4)
+    1
+
+    >>> min_subarray_sum_ge_k([5, 1, 1, 1, 1, 1, 1, 1], 7)
+    3
+    """
+    L, total = 0, 0
+    length = float("inf")
+
+    for R in range(len(nums)):
+        total += nums[R]
+
+        while total >= k:
+            length = min(length, R - L + 1)
+            total -= nums[L]
+            L += 1
+
+    return 0 if length == float("inf") else length
 
 
 if __name__ == "__main__":
