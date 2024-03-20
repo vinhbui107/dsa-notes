@@ -33,7 +33,7 @@ class MaxHeap:
         return self.size
 
     @staticmethod
-    def _get_get_parent(pos: int) -> int:
+    def _get_parent(pos: int) -> int:
         return pos // 2
 
     @staticmethod
@@ -48,7 +48,7 @@ class MaxHeap:
         temp = self.heap[pos]
 
         while pos // 2 > 0:
-            parent = self._get_get_parent(pos)
+            parent = self._get_parent(pos)
             if self.heap[pos] > self.heap[parent]:
                 # swap data with parent node
                 self.heap[pos] = self.heap[parent]
